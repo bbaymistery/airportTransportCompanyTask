@@ -1,0 +1,65 @@
+@import '../../styles/breakpoint'
+;
+
+.features {
+    min-height: 500px;
+    border-bottom: 1px solid rgb(203, 203, 203);
+
+    .container_auto_center {
+        width: 100%;
+        max-width: 1452px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        // background-color: red;
+        margin-top: 4rem;
+        gap: 2rem;
+        overflow: hidden;
+
+        @include breakpointMax(400px) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .features_card {
+            padding: 2rem 3rem;
+            box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+
+
+            @include breakpointMax(400px) {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .features_title {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            .features_btn {
+                border: none;
+                background-color: transparent;
+                color: blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                @include breakpointMax(400px) {
+                    margin: 0 auto;
+                }
+
+                &:hover {
+                    .btn_icon {
+                        margin-left: 15px;
+                        transition: .5s ease;
+                    }
+                }
+
+                .btn_icon {
+                    margin-left: 10px;
+                    color: red;
+                }
+            }
+        }
+    }
+}

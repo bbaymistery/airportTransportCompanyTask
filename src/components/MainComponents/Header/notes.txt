@@ -1,0 +1,2 @@
+Header is main component
+Top header and bottom header are inside Header component

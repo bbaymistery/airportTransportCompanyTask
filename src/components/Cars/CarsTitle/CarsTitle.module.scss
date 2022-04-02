@@ -1,0 +1,103 @@
+@import '../../../styles/breakpoint'
+;
+
+.title_container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: red;
+    flex-direction: column;
+
+    // width: 100%;
+    // height: 100%;
+    .title_logo {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        // background-color: red;
+        align-content: center;
+        justify-items: center;
+
+        @include breakpointMax(795px) {
+            grid-template-columns: 1fr 100px 1fr;
+        }
+
+        .lines {
+            width: 100px;
+            // background-color: rgb(36, 31, 31);
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .line1,
+            .line2 {
+
+                content: '';
+                width: 50%;
+                height: 2px;
+                background-color: rgb(14, 14, 14);
+                margin: 1px;
+
+                @include breakpointMax(795px) {
+                    width: 25%;
+
+                }
+            }
+
+            .line1 {}
+
+        }
+    }
+
+    .title {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+        margin-top: -1rem;
+
+        @include breakpointMax(795px) {
+            font-size: 1.5rem;
+
+        }
+    }
+
+    .title_desc {
+        // background-color: red;
+        width: 400px;
+        margin-top: 1rem;
+        text-align: center;
+
+        @include breakpointMax(795px) {
+            width: 100%;
+
+        }
+    }
+}
+
+/*
+    &::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 3px;
+        background: rgb(235, 53, 113);
+        top: 100%;
+        left: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 1px;
+        background: rgb(235, 53, 113);
+        top: 120%;
+        left: 0;
+    }
+*/

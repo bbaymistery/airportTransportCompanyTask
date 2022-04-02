@@ -1,0 +1,113 @@
+@import '../../../../styles/breakpoint';
+
+.bottom_header {
+    background-color: rgb(252, 252, 252);
+    height: 100px;
+
+    @include breakpoint-down(small) {
+        height: 85px;
+    }
+
+    .container_auto_center {
+        width: 100%;
+        max-width: 1452px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        .bottom_content {
+            display: flex;
+            align-items: center;
+            // border: 1px solid red;
+            width: 100%;
+
+            @include breakpoint-down(small) {
+                justify-content: space-between;
+            }
+
+            .bottom_logo {
+                // margin-right: 110px;
+
+            }
+
+
+            .ul {
+                // background-color: yellow;
+                flex-basis: 85%;
+                display: flex;
+                justify-content: space-evenly;
+
+                @include breakpoint-down(small) {
+                    display: none;
+                }
+
+                .linkname {
+                    text-transform: uppercase;
+                    font-size: 1rem;
+
+                    @include breakpoint-down(medium) {
+                        font-size: .65rem;
+                    }
+
+                    &:hover {
+                        color: red;
+                        transition: .5s ease;
+                    }
+
+                }
+
+                .linkname.active {
+                    color: red;
+                }
+            }
+
+
+            .search_icon_div {
+                margin: 0px 1.5rem;
+
+                @include breakpoint-down(small) {
+                    display: none;
+                }
+
+                .search_icon {
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+
+
+            .login_register {
+                @include breakpoint-down(small) {
+                    display: none;
+                }
+
+                &_button {
+                    background-color: rgb(201, 63, 63);
+                    padding: 13px;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+
+                    &:active {
+                        transform: scale(1.03);
+                    }
+                }
+            }
+
+            .hamburger_menu {
+                display: none;
+
+                @include breakpoint-down(small) {
+                    display: block;
+                    padding-right: 11px;
+                }
+
+            }
+        }
+
+
+
+    }
+}

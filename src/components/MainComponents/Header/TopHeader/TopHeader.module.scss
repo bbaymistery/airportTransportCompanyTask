@@ -1,0 +1,93 @@
+@import '../../../../styles/breakpoint';
+
+
+.top_header {
+    background-color: rgb(22, 6, 80);
+    height: 50px;
+
+    .container_auto_center {
+        width: 100%;
+        max-width: 1452px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .top_content {
+            display: flex;
+            // background-color: yellow;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+            @include breakpoint-down(small) {
+                justify-content: center;
+            }
+
+            .top_header_left {
+                height: 100%;
+                display: flex;
+
+                .left_informations {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include breakpoint-down(small) {
+                        font-size: .75rem;
+                    }
+
+                    .phone {
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        color: rgb(152, 150, 150);
+
+                        .ph_icon {
+                            margin-left: 1rem;
+                            padding-right: 1rem;
+                            color: white;
+
+                        }
+
+                    }
+
+                    .email {
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        margin-left: 1.5rem;
+                        color: rgb(152, 150, 150);
+
+                        .email_icon {
+                            padding-right: 1rem;
+                            color: white;
+
+                        }
+                    }
+                }
+
+
+            }
+
+            .top_header_right {
+                display: flex;
+                align-items: center;
+
+                @include breakpoint-down(small) {
+                    display: none;
+                }
+
+                .right_icons {
+                    color: white;
+
+                    .iicon {
+                        height: 100%;
+                        padding: 16px 16px;
+                        border: 1px solid rgba(133, 133, 133, 0.433);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/breakpoint'
+;
+
+.cars_container {
+    min-height: 600px;
+    background-color: rgb(221, 230, 233);
+    padding-bottom: 3rem;
+
+    .container_auto_center {
+        width: 100%;
+        max-width: 1452px;
+        margin: 0 auto;
+    }
+}

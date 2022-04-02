@@ -1,0 +1,187 @@
+@import '../../../styles/breakpoint';
+
+.sidebar {
+    padding-top: 56px;
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1200px;
+    right: 0;
+    z-index: -9990;
+    transition: ease 1.2s;
+    display: none;
+
+    @include breakpoint-down(small) {
+        display: block;
+    }
+
+    .sidebar_content {
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        .bottom_logo {
+            // margin-right: 110px;
+
+        }
+
+
+        .ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+
+            .linkname {
+                text-transform: uppercase;
+                font-size: 1rem;
+
+                @include breakpoint-down(medium) {
+                    font-size: .65rem;
+                    padding: 11px 0px;
+                }
+
+                &:hover {
+                    color: red;
+                    transition: .5s ease;
+                }
+
+            }
+
+            .linkname.active {
+                color: red;
+            }
+        }
+
+
+
+
+        .login_register {
+
+            &_button {
+                background-color: rgb(201, 63, 63);
+                padding: 11px;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 14px;
+
+                &:active {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+
+    }
+
+    .close_menu {
+        display: block;
+
+        position: absolute;
+        right: 11px;
+        top: 85px;
+    }
+
+}
+
+.activesidebar {
+    left: 0px;
+    padding-top: 56px;
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+    transition: ease 1.2s;
+
+    .sidebar_content {
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        .bottom_logo {
+            // margin-right: 110px;
+
+        }
+
+
+        .ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+
+            .linkname {
+                text-transform: uppercase;
+                font-size: 1rem;
+
+                @include breakpoint-down(medium) {
+                    font-size: .65rem;
+                    padding: 11px 0px;
+                }
+
+                &:hover {
+                    color: red;
+                    transition: .5s ease;
+                }
+
+            }
+
+            .linkname.active {
+                color: red;
+            }
+        }
+
+
+
+
+        .login_register {
+
+            &_button {
+                background-color: rgb(201, 63, 63);
+                padding: 11px;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 14px;
+
+                &:active {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+
+    }
+
+    .close_menu {
+        display: block;
+
+        position: absolute;
+        right: 11px;
+        top: 85px;
+    }
+}
